@@ -32,15 +32,16 @@
         </div>
         {{#loser}}
         <form action="/replay" method="post" id="boxes">
-            {{/loser}} {{^loser}}
+            {{/loser}} 
+            {{^loser}}
             <form action="/letter" method="post" id="boxes">
                 {{/loser}}
                
                
-                <input type="text" name="userChoice" autofocus="autofocus" id="userChoice" maxlength="1" autocomplete="off"><br>   
+                <input type="text" name="userChoice" pattern="[A-Za-z]" autofocus="autofocus" id="userChoice" maxlength="1" autocomplete="off"><br>   
                           
-               {{#loser}}  <input type="submit" value="Pick a Letter" class="guess"> {{/loser}}
-                 {{^loser}} <input type="submit" value="Try again?" class="guess"> {{/loser}} 
+               {{^loser}}  <input type="submit" value="Pick a Letter" class="guess"> {{/loser}}
+                 {{#loser}} <input type="submit" value="Try again?" class="guess"> {{/loser}} 
 
             </form>
     </div>

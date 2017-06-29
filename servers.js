@@ -55,6 +55,7 @@ function wordGenerator(difficulty) {
    for (let i = 0; i < words.length; i++) {symbols.push("-");
 }
   console.log(symbols) 
+  return
   
 }
 
@@ -84,6 +85,12 @@ app.use(
 
 app.get("/", function(req, res) {
   req.session.destroy();
+   usedLetters = [];
+  loser = "";
+  msg = "Good Luck";
+  numberOfTries = 8;
+  words = [];
+  symbols = [];
   res.render("index");
 });
 app.get("/index", function(req, res) {
@@ -93,8 +100,6 @@ app.get("/index", function(req, res) {
   numberOfTries = 8;
   words = [];
   symbols = [];
-
-  
   res.render("game", {
     symbols: symbols,
     usedLetters: usedLetters,
@@ -170,10 +175,6 @@ app.get("/replay", function(req, res) {
   res.render("/");
 });
 app.post("/replay", function(req, res) {
-  // here, redirect to generator route
-  // genereate new word with function
-  // redirect to "/"
-
   res.redirect("/");
 });
 app.get("/winner", function(req, res) {
