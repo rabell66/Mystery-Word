@@ -1,7 +1,6 @@
 {
   "name": "week-five-project",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,5 +15,16 @@
     "express-validator": "^3.2.0",
     "file-system": "^2.2.2",
     "mustache-express": "^1.2.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rabell66/Mystery-Word.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/rabell66/Mystery-Word/issues"
+  },
+  "homepage": "https://github.com/rabell66/Mystery-Word#readme",
+  "description": ""
 }
